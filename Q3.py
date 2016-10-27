@@ -24,6 +24,7 @@ def processarTexto(nomeArq, sinonimos):
         for word in line.strip('\n').split(" "):
            if word in sinonimos:
                line = line.replace(word,sinonimos[word])
+
         arquivoTemp.write(line)
 
     arquivoTemp.close()
