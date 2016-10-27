@@ -2,8 +2,8 @@ import random, struct
 
 try:
     with open("arquivo.bin", "wb") as arq:
-        for i in range(10):
-            numero = struct.pack("i", random.randint(0, 3))
+        for i in range(11):
+            numero = struct.pack("i", i)
             arq.write(numero)
     arq.close()
 except IOError:
