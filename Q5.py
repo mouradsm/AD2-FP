@@ -3,7 +3,6 @@ arquivo = input("Informe o nome do arquivo binário de números: ")
 
 def buscar(arq, num):
 
-    print("busquei")
     arq.seek(0)
     primeiro = struct.unpack("i",arq.read(4))[0]
     achado = False
