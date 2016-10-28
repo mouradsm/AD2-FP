@@ -45,8 +45,6 @@ try:
             else:
                 print("O número não foi encontrado.\n")
 
-
-
     arquivo.close()
 except IOError:
     print("Erro ao abrir ou manipular o arquivo.")
