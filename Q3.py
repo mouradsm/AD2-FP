@@ -1,18 +1,15 @@
 arquivoSinonimo =   input("Informe o nome do arquivo de sinônimos: ")
 arquivoTexto    =   input("Informe o nome do arquivo com o texto: ")
 
-def recuperaLinhas(arquivo, modo ='r'):
-    conteudo = open(arquivo, modo)
-    return conteudo.readlines()
-
 def lerSinonimos(nomeArq):
-    linhas = recuperaLinhas(nomeArq)
+    conteudo = open(nomeArq, 'r')
 
     dicionario = dict()
 
-    for line in linhas:
+    for line in conteudo:
         palavras = line.strip('\n').split()
         dicionario.update({palavras[0]: palavras[1]})
+
     return dicionario
 
 def processarTexto(nomeArq, sinonimos):
